@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.books.presentation.ui.LoginFragment"
+        android:label="Login Fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.books.presentation.ui.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" />
+
+</navigation>

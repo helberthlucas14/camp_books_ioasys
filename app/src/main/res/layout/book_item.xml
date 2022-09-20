@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="false"
+    android:background="@color/white"
+    android:elevation="20dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/img_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookTitle"
+            style="@style/Book_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toEndOf="@id/img_book"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Crossing the Chasm" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookSubTitle"
+            style="@style/Book_SubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/tvBookTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvBookTitle"
+            tools:text="Geoffrey A. Moore" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_book_pages"
+            style="@style/Book_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_book_editor"
+            app:layout_constraintStart_toStartOf="@id/tvBookSubTitle"
+            tools:text="150 páginas" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_book_editor"
+            style="@style/Book_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_book_date"
+            app:layout_constraintStart_toStartOf="@id/tvBookSubTitle"
+            tools:text="Editora Loyola" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_book_date"
+            style="@style/Book_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/img_book"
+            app:layout_constraintStart_toStartOf="@id/tvBookSubTitle"
+            tools:text="Publicado em 2020" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

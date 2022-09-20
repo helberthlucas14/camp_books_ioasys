@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:ignore="HardcodedText">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/ic_close"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBook"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/img_book"
+            app:cardElevation="24dp"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btClose" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/Book_Details_Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="64dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBook"
+            tools:text="Change By Design Second line example" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAuthor"
+            style="@style/Book_SubTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tvTitle"
+            app:layout_constraintRight_toRightOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Tim Brown, Julie Zhuo, Fried Maximiilian" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInformationTitle"
+            style="@style/Book_Details_Editor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Informações"
+            android:textAllCaps="true"
+            app:layout_constraintLeft_toLeftOf="@id/tvAuthor"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAuthor" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llInformationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInformationTitle">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPageLabel"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Páginas" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEditorLabel"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Editora" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvYearLabel"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Publicação" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLanguageLabel"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Idioma" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleLabel"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Título Original" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvISBN10"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ISBN-10" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvISBN13"
+                style="@style/Book_Details_Editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ISBN-13" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llInformationValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvInformationTitle">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPageValue"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEditorValue"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvYearValue"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLanguageValue"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleValue"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvISBN10Value"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvISBN13Value"
+                style="@style/Book_Details_Editor_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEditorTitle"
+            style="@style/Book_Details_Editor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Resenha da editora"
+            android:textAllCaps="true"
+            app:layout_constraintLeft_toLeftOf="@id/llInformationLabel"
+            app:layout_constraintRight_toRightOf="@id/llInformationValue"
+            app:layout_constraintTop_toBottomOf="@id/llInformationLabel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEditorReview"
+            style="@style/Book_Details_Editor_Review"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintLeft_toLeftOf="@id/tvEditorTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEditorTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
